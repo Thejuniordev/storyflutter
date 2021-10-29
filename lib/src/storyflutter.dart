@@ -1,8 +1,15 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import 'package:storyflutter/src/models/app_info.dart';
+
 class Storyflutter extends StatefulWidget {
-  const Storyflutter({Key? key}) : super(key: key);
+  final AppInfo appInfo;
+
+  const Storyflutter({
+    Key? key,
+    required this.appInfo,
+  }) : super(key: key);
   @override
   _StoryflutterState createState() => _StoryflutterState();
 }
