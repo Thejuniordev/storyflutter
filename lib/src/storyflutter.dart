@@ -21,8 +21,8 @@ import 'package:storyflutter/src/routing/story_router_delegate.dart';
 import 'package:storyflutter/src/services/filter_service.dart';
 import 'package:storyflutter/src/utils/utils.dart';
 
-class Widgetbook extends StatefulWidget {
-  const Widgetbook({
+class Storyflutter extends StatefulWidget {
+  const Storyflutter({
     Key? key,
     required this.categories,
     this.devices = const [
@@ -35,14 +35,14 @@ class Widgetbook extends StatefulWidget {
   }) : super(key: key);
 
   /// Categories which host Folders and WidgetElements.
-  /// This can be used to organize the structure of the Widgetbook on a large
+  /// This can be used to organize the structure of the Storyflutter on a large
   /// scale.
   final List<Category> categories;
 
   /// The devices on which Stories are previewed.
   final List<Device> devices;
 
-  /// Information about the app that is catalogued in the Widgetbook.
+  /// Information about the app that is catalogued in the Storyflutter.
   final AppInfo appInfo;
 
   /// The `ThemeData` that is shown when the light theme is active.
@@ -52,10 +52,10 @@ class Widgetbook extends StatefulWidget {
   final ThemeData? darkTheme;
 
   @override
-  _WidgetbookState createState() => _WidgetbookState();
+  _StoryflutterState createState() => _StoryflutterState();
 }
 
-class _WidgetbookState extends State<Widgetbook> {
+class _StoryflutterState extends State<Storyflutter> {
   // TODO ugly hack
   late BuildContext contextWithProviders;
 
@@ -70,7 +70,7 @@ class _WidgetbookState extends State<Widgetbook> {
   }
 
   @override
-  void didUpdateWidget(covariant Widgetbook oldWidget) {
+  void didUpdateWidget(covariant Storyflutter oldWidget) {
     // TODO remove this and put into the Builders
     OrganizerProvider.of(contextWithProviders)!.update(widget.categories);
     DeviceProvider.of(contextWithProviders)!.update(widget.devices);
