@@ -10,7 +10,6 @@ enum DeviceType {
   unknown,
 }
 
-/// A virtual device that will rendered when a story is previewed
 @immutable
 class Device {
   const Device({
