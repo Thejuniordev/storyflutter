@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:storyflutter/src/models/models.dart';
+import 'package:storyflutter/src/models/organizers/category.dart';
 import 'package:storyflutter/storyflutter.dart';
 
 class CustomWidget extends StatelessWidget {
@@ -18,7 +20,45 @@ class HotReload extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column();
+    return Storyflutter(
+      categories: [
+        Category(
+          name: 'widgets',
+          widgets: [
+            WidgetElement(
+              name: '$CustomWidget',
+              stories: [
+                Story(
+                  name: 'Default',
+                  builder: (context) => const CustomWidget(),
+                ),
+              ],
+            ),
+          ],
+          folders: [
+            Folder(
+              name: 'Texts',
+              widgets: [
+                WidgetElement(
+                  name: 'Normal Text',
+                  stories: [
+                    Story(
+                      name: 'Default',
+                      builder: (context) => const Text(
+                        'The brown fox ...',
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ],
+        ),
+      ],
+      appInfo: AppInfo(
+        name: 'Storybook Flutter',
+      ),
+    );
   }
 }
 
