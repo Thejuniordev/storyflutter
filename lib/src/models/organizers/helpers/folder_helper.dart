@@ -1,5 +1,8 @@
 import 'package:storyflutter/storyflutter.dart';
 
+import '../category.dart';
+import '../folder.dart';
+
 /// Helper to navigate the folder tree.
 class FolderHelper {
   static List<Folder> getAllFoldersFromCategories(List<Category> categories) {

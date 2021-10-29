@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:storyflutter/src/models/app_info.dart';
 import 'package:storyflutter/src/navigation/ui/navigation_panel.dart';
 import 'package:storyflutter/src/providers/canvas_provider.dart';
 import 'package:storyflutter/src/providers/canvas_state.dart';

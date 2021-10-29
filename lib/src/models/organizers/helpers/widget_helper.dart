@@ -1,5 +1,7 @@
 import 'package:storyflutter/storyflutter.dart';
 
+import '../../models.dart';
+
 /// helper to obtain all WidgetElements in the navigation tree.
 class WidgetHelper {
   static List<WidgetElement> getAllWidgetElementsFromCategories(
