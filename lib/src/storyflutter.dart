@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import 'package:storyflutter/src/configure_non_web.dart'
+    if (dart.library.html) 'package:storyflutter/src/configure_web.dart';
 import 'package:storyflutter/src/models/app_info.dart';
 
 class Storyflutter extends StatefulWidget {
